@@ -59,6 +59,7 @@ export default class Prompt {
   public cancel(): void {
     let { nvim } = this
     nvim.call('coc#prompt#stop_prompt', ['list'], true)
+    nvim.call('set cmdheight=1', [], true)
   }
 
   public reset(): void {
