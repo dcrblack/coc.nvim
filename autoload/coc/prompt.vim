@@ -182,6 +182,7 @@ function! coc#prompt#stop_prompt(session)
     let s:activated = 0
     call s:reset()
     call feedkeys("\<esc>", 'int')
+    exe "set cmdheight=1"
   endif
 endfunction
 
